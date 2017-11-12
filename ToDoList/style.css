@@ -1,0 +1,68 @@
+body{
+	margin:0;
+	padding: 0;
+	background-color: #444;
+}
+
+#block{ 
+	background-color: #444;
+	width: 50%;
+	margin-left: 25%;
+	margin-right: 25%;
+	margin-top:10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+button{
+ display: inline-block;
+ border:1px solid #c9ae34;
+ color: #999;
+ border-radius: 3px 3px 3px 3px;
+ -webkit-border-radius: 3px 3px 3px 3px;
+ -moz-border-radius: 3px 3px 3px 3px;
+ font-family: Verdana;
+ width: 17%;
+ margin-left: 0px;
+ height: auto;
+ font-size: 11px;
+ padding: 5px 20px;
+ box-shadow: inset 0 1px 0 0 #fff6ce,inset 0 -1px 0 0 #e3c852,inset 0 0 0 1px #fce88d,0 2px 4px 0 #D4D4D4;
+ -moz-box-shadow: inset 0 1px 0 0 #fff6ce,inset 0 -1px 0 0 #e3c852,inset 0 0 0 1px #fce88d,0 2px 4px 0 #D4D4D4;
+ -webkit-box-shadow: inset 0 1px 0 0 #fff6ce,inset 0 -1px 0 0 #e3c852,inset 0 0 0 1px #fce88d,0 2px 4px 0 #D4D4D4;
+ 
+ background-image: linear-gradient(to top, #222, #222);
+ background-color: #444;
+
+}
+button:hover, button:active{
+ border:1px solid #967d09;
+ color: #fcdf5b;
+ box-shadow: inset 0 1px 0 0 #fff6ce,inset 0 -1px 0 0 #e3c852,inset 0 0 0 1px #fce88d;
+ -moz-box-shadow: inset 0 1px 0 0 #fff6ce,inset 0 -1px 0 0 #e3c852,inset 0 0 0 1px #fce88d;
+ -webkit-box-shadow: inset 0 1px 0 0 #fff6ce,inset 0 -1px 0 0 #e3c852,inset 0 0 0 1px #fce88d;
+ background-color: #fcdf5b;
+}
+#text {
+	border-radius: 3px 3px 3px 3px;
+	border:1px solid #c9ae34;
+	padding:4px;
+	color: #fcdf5b;
+	background-color: #444;
+	border-color:  #fcdf5b;
+	-moz-box-shadow: inset 0 1px 0 0 #fff6ce,inset 0 -1px 0 0 #e3c852,inset 0 0 0 1px #fce88d,0 2px 4px 0 #D4D4D4;
+ -webkit-box-shadow: inset 0 1px 0 0 #fff6ce,inset 0 -1px 0 0 #e3c852,inset 0 0 0 1px #fce88d,0 2px 4px 0 #D4D4D4;
+ width: 35%;
+ margin-left: 1.5%;
+
+}
+
+p{
+	color:#fcdf5b;
+}
+
+.cn{
+	width: 25%;
+	margin-left: 0px;
+	
+}
