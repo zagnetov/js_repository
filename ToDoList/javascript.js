@@ -3,13 +3,11 @@ var domBuilderModule = (function () {
 	var newTask;
 	var taskListHTML;
 	var tasks;
-	var checkboxes;
 
 	function init() {
 		initControls();
 		initListeners();
 		initTaskList();
-		initCheckboxes();
 		initTaskListHTML();
 		initNewTask();
 	}
@@ -28,10 +26,6 @@ var domBuilderModule = (function () {
 
 	function initTaskList(){
 		tasks = [];
-	}
-
-	function initCheckboxes(){
-		checkboxes = [];
 	}
 
 	function initTaskListHTML(){
