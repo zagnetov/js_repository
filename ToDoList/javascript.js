@@ -52,13 +52,6 @@ var domBuilderModule = (function () {
 	function deleteTask(){
 		var size = tasks.length;
 		var checkbox; 
-		/*for(var i = 0; i < size; i++){
-			checkbox = document.getElementById(i);
-			if(checkbox.checked == true){
-				tasks.splice(i,1);
-				i--;
-			}
-		}*/
 		changeTaskStatus();
 		tasks = tasks.filter(function(task){
 			return task.check == false;
