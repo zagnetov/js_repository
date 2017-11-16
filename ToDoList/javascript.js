@@ -4,6 +4,7 @@ var domBuilderModule = (function () {
 	var taskListHTML;
 	var tasks;
 	var checkboxes;
+	var currentTask;
 
 	function init() {
 		initControls();
@@ -43,44 +44,58 @@ var domBuilderModule = (function () {
 	}
 
 	function addTask(){
-		tasks.push(newTask.value);
+		currentTask = {task: newTask.value, check: false};
+		tasks.push(currentTask);
 		repaint();
 	}
 
 	function deleteTask(){
-		var bufArray = [];
 		var size = tasks.length;
-		for(var i = 0; i < size; i++){
-			var checkbox = document.getElementById(i);
-			if(checkbox.checked == false){
-				bufArray.push(tasks[i]);
+		var checkbox; 
+		/*for(var i = 0; i < size; i++){
+			checkbox = document.getElementById(i);
+			if(checkbox.checked == true){
+				tasks.splice(i,1);
+				i--;
 			}
-		}
-		tasks = bufArray;
+		}*/
+		changeTaskStatus();
+		tasks = tasks.filter(function(task){
+			return task.check == false;
+		})
 		repaint();
 	}
 
 	function repaint(){
 		taskListHTML.innerHTML = '';
-			for(var i = 0; i < tasks.length; i++){
-				taskListHTML.innerHTML += '<p>' + '<input type = "checkbox" ' + 'id="' + i +'">' + tasks[i] + '</p>' ;
-			}
+		var size = tasks.length;
+		for(var i = 0; i < size; i++){
+			taskListHTML.innerHTML += '<p>' + '<input type = "checkbox" ' + 'id="' + i +'">' + tasks[i].task + '</p>' ;
+		}
 	}
-
+	function changeTaskStatus(){
+		var size = tasks.length;
+		for (var i = 0; i < size; i++){
+			if(document.getElementById(i).checked == true){
+				tasks[i].check = true;
+			}
+		}
+	}
 	function checkAll(){
 		var checkCounter = 0;
-		for(var i = 0; i < tasks.length; i++){
+		var size = task.length;
+		for(var i = 0; i < size; i++){
 			if(document.getElementById(i).checked == true){
 				checkCounter++;
 			}
 		}
-		if(checkCounter == tasks.length){
-			for(var i = 0; i < tasks.length; i++){
+		if(checkCounter == size){
+			for(var i = 0; i < size; i++){
 			document.getElementById(i).checked = false;
 			}
 		}
 		else{
-			for(var i = 0; i < tasks.length; i++){
+			for(var i = 0; i < size; i++){
 				document.getElementById(i).checked = true;
 			}
 		}
